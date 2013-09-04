@@ -99,13 +99,28 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    # Uncomment the next line for simple clickjacking protection:
-    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.doc.XViewMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'cms.middleware.page.CurrentPageMiddleware',
+    'cms.middleware.user.CurrentUserMiddleware',
+    'cms.middleware.toolbar.ToolbarMiddleware',
+    'cms.middleware.language.LanguageCookieMiddleware',
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.contrib.messages.context_processors.messages',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.request',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'cms.context_processors.media',
+    'sekizai.context_processors.sekizai',
 )
 
 ROOT_URLCONF = 'django_cms.urls'
@@ -114,9 +129,7 @@ ROOT_URLCONF = 'django_cms.urls'
 WSGI_APPLICATION = 'django_cms.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    join(PROJECT_ROOT, "templates"),
 )
 
 INSTALLED_APPS = (
@@ -127,6 +140,30 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Django CMS
+    'cms',
+    'cms.stacks',
+    'mptt',
+    'menus',
+    'south',
+    'sekizai',
+    'djangocms_admin_style',
+
+    # Django CMS extra plugins
+    'cms.plugins.file',
+    'cms.plugins.flash',
+    'cms.plugins.googlemap',
+    'cms.plugins.link',
+    'cms.plugins.picture',
+    # 'cms.plugins.snippet', # security warning (see: http://docs.django-cms.org/en/develop/getting_started/plugin_reference.html#snippets-plugin)
+    'cms.plugins.teaser',
+    'djangocms_text_ckeditor',
+    'cms.plugins.video',
+    # 'filer',
+    # 'easy_thumbnails',
+    'reversion',
+
+    # Django admin
     'django.contrib.admin',
 )
 
@@ -158,3 +195,14 @@ LOGGING = {
         },
     }
 }
+
+# Django CMS
+
+CMS_TEMPLATES = (
+    ('template_1.html', 'Template One'),
+    ('template_2.html', 'Template Two'),
+)
+
+LANGUAGES = [
+    ('en', 'English'),
+]
