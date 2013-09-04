@@ -1,3 +1,19 @@
-# Common requirements
+# Django CMS 3 beta
+https://github.com/divio/django-cms/archive/3.0.0.beta2.zip
 
+# Django CMS dependencies
 Django==1.5.2
+django-classy-tags==0.4
+South==0.8.1
+html5lib==1.0b1
+django-mptt==0.5.2
+django-sekizai==0.7
+six==1.3.0
+djangocms-admin-style==0.1.2
+
+# Optional but recommended packages
+Pillow==2.0.0
+django-filer==0.9.4
+cmsplugin-filer==0.9.5
+django-reversion==1.7
+djangocms-text-ckeditor==2.0.2
