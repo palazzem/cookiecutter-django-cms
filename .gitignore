@@ -1,4 +1,10 @@
+# Django
 *.log
 *.pot
 *.pyc
-local_settings.py
+
+# Misc
+*.db
+
+# IDEs
+.idea/
