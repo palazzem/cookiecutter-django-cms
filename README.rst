@@ -27,13 +27,13 @@ Clone this repository (change project_name with something more suitable for you)
 
     git clone https://github.com/emanuele-palazzetti/django-cms-template.git project_name
 
-**NOTE**: all commands are launched inside ``django_cms`` folder!
-
-Install all requirements:
+Enter inside ``project_name`` folder and install all requirements:
 
 .. code-block:: python
 
     pip install -r requirements/development.txt
+
+**NOTE**: from now on, all commands are launched inside ``django_cms`` folder!
 
 Prepare your database (sqlite as default) and create your admin account:
 
