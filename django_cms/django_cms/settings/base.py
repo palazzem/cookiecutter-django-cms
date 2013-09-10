@@ -198,8 +198,7 @@ LOGGING = {
 # Django CMS
 
 CMS_TEMPLATES = (
-    ('template_1.html', 'Template One'),
-    ('template_2.html', 'Template Two'),
+    ('single_page.html', 'Single page'),
 )
 
 LANGUAGES = [

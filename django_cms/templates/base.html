@@ -2,11 +2,20 @@
 <html>
     <head>
         {% render_block "css" %}
+        {% block css %}
+            <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+            <link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" />
+            <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" />
+        {% endblock css %}
     </head>
     <body>
         {% cms_toolbar %}
-        {% placeholder base_content %}
-        {% block base_content %}{% endblock %}
+        {% block base_content %}{% endblock base_content %}
         {% render_block "js" %}
+        {% block js %}
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+            <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        {% endblock js %}
     </body>
 </html>
