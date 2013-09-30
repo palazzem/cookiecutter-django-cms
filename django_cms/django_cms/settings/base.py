@@ -140,6 +140,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     # Django CMS
+    'core',
     'cms',
     'cms.stacks',
     'mptt',
