@@ -80,6 +80,12 @@ Other Django CMS bootstrap tools
 .. _aldryn-installer: https://github.com/nephila/aldryn-installer
 .. _@nephila: http://twitter.com/NephilaIt
 
+Roadmap
+-------
+
+* Heroku fast deploy
+* Advanced bootstrap template
+
 Credits
 -------
 
