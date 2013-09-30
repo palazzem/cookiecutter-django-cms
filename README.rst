@@ -83,8 +83,12 @@ Other Django CMS bootstrap tools
 Roadmap
 -------
 
-* Heroku fast deploy
-* Advanced bootstrap template
+* Heroku deploy (with Amazon S3 for statics)
+* Webfaction deploy
+* `Cookiecutter`_ template
+* Advanced bootstrap templates
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
 
 Credits
 -------
