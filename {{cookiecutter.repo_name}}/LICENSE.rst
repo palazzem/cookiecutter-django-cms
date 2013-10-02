@@ -1,4 +1,4 @@
-Copyright (c) 2013, {{ cookiecutter.full_name }} and contributors
+Copyright (c) {{ cookiecutter.year }}, {{ cookiecutter.full_name }} and contributors
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

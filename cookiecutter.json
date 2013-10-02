@@ -4,8 +4,8 @@
 	"github_username": "emanuele-palazzetti",
 	"project_name": "Django CMS",
 	"repo_name": "django-cms-web",
+    "django_cms_app": "django_cms",
 	"project_short_description": "Django CMS boilerplate to start your website in 5 minutes!",
-	"release_date": "2013-10-03",
 	"year": "2013",
 	"version": "0.1.0"
 }
