@@ -35,10 +35,10 @@ Prepare your database (sqlite as default) and run the server:
 
 .. code-block:: python
 
-    python manage.py syncdb --all --settings={{ cookiecutter.repo_name }}.settings.dev
-    python manage.py migrate --fake --settings={{ cookiecutter.repo_name }}.settings.dev
-    python manage.py cms check --settings={{ cookiecutter.repo_name }}.settings.dev
-    python manage.py runserver --settings={{ cookiecutter.repo_name }}.settings.dev
+    python manage.py syncdb --all --settings={{ cookiecutter.django_cms_app }}.settings.dev
+    python manage.py migrate --fake --settings={{ cookiecutter.django_cms_app }}.settings.dev
+    python manage.py cms check --settings={{ cookiecutter.django_cms_app }}.settings.dev
+    python manage.py runserver --settings={{ cookiecutter.django_cms_app }}.settings.dev
 
 Create your first page with Django CMS admin (``http://localhost:8000/admin``)!
 
