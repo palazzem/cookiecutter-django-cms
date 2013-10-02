@@ -29,7 +29,7 @@ First, get cookiecutter::
 
 Now run it against this repo::
 
-    $ cookiecutter https://github.com/emanuele-palazzetti/django-cms-template.git
+    $ cookiecutter https://github.com/emanuele-palazzetti/cookiecutter-django-cms.git
 
 You'll be prompted for some questions, answer them, then it will create your CMS.
 
