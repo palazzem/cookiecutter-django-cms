@@ -6,7 +6,7 @@
     :target: http://badge.fury.io/py/{{ cookiecutter.repo_name }}
 
 .. image:: https://pypip.in/d/{{ cookiecutter.repo_name }}/badge.png
-        :target: https://crate.io/packages/{{ cookiecutter.repo_name }}?version=latest
+    :target: https://crate.io/packages/{{ cookiecutter.repo_name }}?version=latest
 
 
 {{ cookiecutter.project_short_description}}
@@ -31,7 +31,7 @@ Enter inside ``{{ cookiecutter.repo_name }}`` folder and install all requirement
 
     pip install -r requirements/development.txt
 
-Prepare your database (sqlite as default) and run the server:
+Enter inside ``{{ cookiecutter.django_cms_app }}`` then prepare your database (sqlite as default) and run the server:
 
 .. code-block:: python
 
