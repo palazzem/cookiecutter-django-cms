@@ -4,7 +4,7 @@ from os.path import join, abspath, dirname
 # Root directory of our project
 PROJECT_ROOT = abspath(join(abspath(dirname(__file__)), "..", ".."))
 
-# Django settings for django_cms project.
+# Django settings for {{ cookiecutter.django_cms_app }} project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -122,10 +122,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'sekizai.context_processors.sekizai',
 )
 
-ROOT_URLCONF = 'django_cms.urls'
+ROOT_URLCONF = '{{ cookiecutter.django_cms_app }}.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'django_cms.wsgi.application'
+WSGI_APPLICATION = '{{ cookiecutter.django_cms_app }}.wsgi.application'
 
 TEMPLATE_DIRS = (
     join(PROJECT_ROOT, "templates"),
