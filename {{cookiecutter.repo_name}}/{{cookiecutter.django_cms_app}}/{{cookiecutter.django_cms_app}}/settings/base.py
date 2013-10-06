@@ -207,13 +207,16 @@ LOGGING = {
     }
 }
 
-# Django CMS
+# Dummy gettext function
+gettext = lambda s: s
+
+# Django CMS configurations
 CMS_TEMPLATES = (
-    ('single_page.html', 'Single page'),
+    ('single_page.html', gettext('Single page')),
 )
 
 LANGUAGES = [
-    ('en', 'English'),
+    ('en', gettext('English')),
 ]
 
 {% if cookiecutter.django_filer == "y" or cookiecutter.django_filer == "Y" %}
