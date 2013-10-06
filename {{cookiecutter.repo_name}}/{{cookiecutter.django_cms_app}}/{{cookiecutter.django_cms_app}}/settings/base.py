@@ -156,7 +156,7 @@ INSTALLED_APPS = (
     'cms.plugins.link',
     # 'cms.plugins.snippet', # security warning (see: http://docs.django-cms.org/en/develop/getting_started/plugin_reference.html#snippets-plugin)
 
-    {% if cookiecutter.django_filer == "y" or cookiecutter.django_filer == "Y" %}
+    {%- if cookiecutter.django_filer == "y" or cookiecutter.django_filer == "Y" -%}
     # Django filer
     'filer',
     'easy_thumbnails',
@@ -165,7 +165,7 @@ INSTALLED_APPS = (
     'cmsplugin_filer_image',
     'cmsplugin_filer_teaser',
     'cmsplugin_filer_video',
-    {% else %}
+    {%- else -%}
     # Optional Django CMS plugins
     'cms.plugins.file',
     'cms.plugins.picture',
@@ -216,9 +216,11 @@ CMS_TEMPLATES = (
 )
 
 LANGUAGES = [
-    ('en', gettext('English')),
+    {% for language in cookiecutter.languages.strip().split(',') -%}
+    ('{{ language|trim }}', gettext('{{ language|trim }}')),
+    {% endfor %}
 ]
 
-{% if cookiecutter.django_filer == "y" or cookiecutter.django_filer == "Y" %}
+{%- if cookiecutter.django_filer == "y" or cookiecutter.django_filer == "Y" -%}
 TEXT_SAVE_IMAGE_FUNCTION='cmsplugin_filer_image.integrations.ckeditor.create_image_plugin'
 {% endif %}
