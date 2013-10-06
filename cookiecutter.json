@@ -7,5 +7,6 @@
     "django_cms_app": "django_cms",
 	"project_short_description": "Django CMS boilerplate to start your website in 5 minutes!",
 	"year": "2013",
-	"version": "0.1.0"
+	"version": "0.1.0",
+    "django_filer": "n"
 }
