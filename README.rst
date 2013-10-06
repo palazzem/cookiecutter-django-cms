@@ -11,7 +11,7 @@ Notes
 This project aims to deliver `Django CMS`_ very quickly. Without do anything else which is not already written
 in this document, you can use all Django CMS features with just few configurations (4 commands!).
 Obviously all these steps follow the `official documentation`_ (beta version) of Django CMS. Remember to read all main
-documentation sections because this is **just** a template and there is **NO intention** to replace the original
+documentation sections because this is **just** a template and there is **NO intention** to replace the official
 documentation.
 
 .. _Django CMS: https://www.django-cms.org/en/
@@ -41,7 +41,7 @@ Features
 Basic configurations
 --------------------
 
-This template is based on original getting started guide. You have already configured many Django CMS plugins which
+This template is based on official getting started guide. You have already configured many Django CMS plugins which
 you can enable/disable inside ``django_cms/settings/base.py`` with ``INSTALLED_APPS`` setting. There you can also add
 more languages (``LANGUAGES``) and templates (``CMS_TEMPLATES``).
 
@@ -50,7 +50,7 @@ If you add or edit a template, remember to add or edit template name inside ``te
 More configurations
 -------------------
 
-Check original `documentation`_.
+Check official `documentation`_.
 
 .. _documentation: http://docs.django-cms.org/en/develop/getting_started/configuration.html
 
