@@ -141,6 +141,7 @@ INSTALLED_APPS = (
 
     # Django CMS
     'core',
+    'djangocms_text_ckeditor',
     'cms',
     'cms.stacks',
     'mptt',
@@ -150,17 +151,27 @@ INSTALLED_APPS = (
     'djangocms_admin_style',
 
     # Django CMS extra plugins
-    'cms.plugins.file',
     'cms.plugins.flash',
     'cms.plugins.googlemap',
     'cms.plugins.link',
-    'cms.plugins.picture',
     # 'cms.plugins.snippet', # security warning (see: http://docs.django-cms.org/en/develop/getting_started/plugin_reference.html#snippets-plugin)
+
+    {% if cookiecutter.django_filer == "y" or cookiecutter.django_filer == "Y" %}
+    # Django filer
+    'filer',
+    'easy_thumbnails',
+    'cmsplugin_filer_file',
+    'cmsplugin_filer_folder',
+    'cmsplugin_filer_image',
+    'cmsplugin_filer_teaser',
+    'cmsplugin_filer_video',
+    {% else %}
+    # Optional Django CMS plugins
+    'cms.plugins.file',
+    'cms.plugins.picture',
     'cms.plugins.teaser',
-    'djangocms_text_ckeditor',
     'cms.plugins.video',
-    # 'filer',
-    # 'easy_thumbnails',
+    {% endif %}
     'reversion',
 
     # Django admin
@@ -197,7 +208,6 @@ LOGGING = {
 }
 
 # Django CMS
-
 CMS_TEMPLATES = (
     ('single_page.html', 'Single page'),
 )
@@ -205,3 +215,7 @@ CMS_TEMPLATES = (
 LANGUAGES = [
     ('en', 'English'),
 ]
+
+{% if cookiecutter.django_filer == "y" or cookiecutter.django_filer == "Y" %}
+TEXT_SAVE_IMAGE_FUNCTION='cmsplugin_filer_image.integrations.ckeditor.create_image_plugin'
+{% endif %}
