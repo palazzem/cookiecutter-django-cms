@@ -1,0 +1,10 @@
+# Django
+*.log
+*.pot
+*.pyc
+
+# Django static files and media
+media/
+
+# Misc
+*.db
