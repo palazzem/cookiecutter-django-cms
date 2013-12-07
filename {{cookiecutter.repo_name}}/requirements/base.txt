@@ -1,5 +1,5 @@
 # Django CMS 3 (HEAD)
-https://github.com/divio/django-cms/archive/294fba463ccb1a9f58beb1d11538494ff949befd.zip
+https://github.com/divio/django-cms/archive/1138ee56b1638cb444edaac72ac55a95940cdd3e.zip
 
 # Django CMS dependencies
 Django==1.5.5
