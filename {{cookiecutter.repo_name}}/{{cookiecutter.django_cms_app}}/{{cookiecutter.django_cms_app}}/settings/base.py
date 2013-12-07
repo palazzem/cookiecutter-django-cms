@@ -221,6 +221,6 @@ LANGUAGES = [
     {% endfor %}
 ]
 
-{%- if cookiecutter.django_filer == "y" or cookiecutter.django_filer == "Y" -%}
+{% if cookiecutter.django_filer == "y" or cookiecutter.django_filer == "Y" %}
 TEXT_SAVE_IMAGE_FUNCTION='cmsplugin_filer_image.integrations.ckeditor.create_image_plugin'
 {% endif %}
