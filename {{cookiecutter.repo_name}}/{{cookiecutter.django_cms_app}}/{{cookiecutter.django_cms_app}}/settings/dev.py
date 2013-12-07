@@ -6,8 +6,8 @@ TEMPLATE_DEBUG = DEBUG
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'timely.db',
+        'NAME': '{{cookiecutter.repo_name}}.db',
     }
 }
 
-SECRET_KEY = 'devel_purpose'
+SECRET_KEY = 'devel'
