@@ -18,9 +18,9 @@ Requirements
 
 * Django 1.5+
 * Python 2.7
-* `django-cms`_ 3.0.0.beta2
+* `django-cms`_ (unstable at this time)
 
-.. _django-cms: https://github.com/divio/django-cms/tree/3.0.0.beta2
+.. _django-cms: https://github.com/divio/django-cms
 
 Installation
 ------------
