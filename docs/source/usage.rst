@@ -52,6 +52,9 @@ Run all Django CMS check and start django runserver::
 
 Open http://localhost:8000 and create your first page with Django CMS admin!
 
+.. note::
+   You can avoid to use ``--settings`` parameter if you export ``DJANGO_SETTINGS_MODULE`` in your environment
+
 More configurations
 -------------------
 
