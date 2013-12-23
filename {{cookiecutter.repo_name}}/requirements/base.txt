@@ -1,8 +1,9 @@
-# Django CMS 3 (HEAD)
-https://github.com/divio/django-cms/archive/1138ee56b1638cb444edaac72ac55a95940cdd3e.zip
+Django==1.5.5
+
+# Django CMS 3 (beta3)
+https://github.com/divio/django-cms/archive/3.0.0.beta3.zip
 
 # Django CMS dependencies
-Django==1.5.5
 djangocms-text-ckeditor==2.0.4
 djangocms-admin-style==0.2.0
 django-reversion==1.8.0

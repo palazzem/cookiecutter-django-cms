@@ -147,7 +147,7 @@ INSTALLED_APPS = (
     'core',
     'djangocms_text_ckeditor',
     'cms',
-    'cms.stacks',
+    # 'cms.stacks', # Disabled because this is not used
     'mptt',
     'menus',
     'south',
