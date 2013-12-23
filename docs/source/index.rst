@@ -29,4 +29,4 @@ Project info
 
    contributing
    authors
-   history
+   changelog
