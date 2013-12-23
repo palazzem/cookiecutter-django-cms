@@ -1,4 +1,4 @@
-Django==1.5.5
+Django==1.6.1
 
 # Django CMS 3 (beta3)
 https://github.com/divio/django-cms/archive/3.0.0.beta3.zip
