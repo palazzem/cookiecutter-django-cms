@@ -120,6 +120,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'cms.context_processors.media',
     'sekizai.context_processors.sekizai',
+
+    # Custom context processors
+    'core.context_processor.debug_state',
+    'core.context_processor.google_analytics',
 )
 
 ROOT_URLCONF = '{{ cookiecutter.django_cms_app }}.urls'
