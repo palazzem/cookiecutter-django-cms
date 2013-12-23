@@ -11,6 +11,7 @@ New features:
 * Added context processor to expose Google Analytics and Debug to Django template engine
 
 Bug fixes:
+
 * Missing XML sitemaps on urls
 * Psycopg2 is missing in production environment
 * Django reversion 1.8.0 now works
