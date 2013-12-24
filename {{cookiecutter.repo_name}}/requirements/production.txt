@@ -6,6 +6,6 @@ psycopg2==2.5.1
 dj-database-url==0.2.2
 gunicorn==18.0
 django-storages==1.1.4
-boto==2.10.0
+boto==2.21.1
 gevent==0.13.8
 {% endif %}
