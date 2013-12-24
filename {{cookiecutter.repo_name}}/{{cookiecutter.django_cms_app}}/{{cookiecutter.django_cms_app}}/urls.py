@@ -3,8 +3,10 @@ from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from django.conf import settings
 
-admin.autodiscover()
+from cms.sitemaps import CMSSitemap
 
+
+admin.autodiscover()
 urlpatterns = i18n_patterns(
     '',
     url(r'^admin/', include(admin.site.urls)),
