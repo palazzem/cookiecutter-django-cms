@@ -2,16 +2,31 @@
 Deployment
 ==========
 
+Prepare your git repository
+---------------------------
+
+Before continue, be sure to create your git repository::
+
+    $ git init
+    $ git add .
+    $ git commit -m"Initial commit"
+
+.. note::
+   Generated project already have a valid ``.gitignore`` for Django
+
 Heroku
 ------
 
 If you choose to enable Heroku deployment during project bootstrap, you already have anything you need.
 Simply obtain `Heroku Toolbelt`_ and start creating your first application::
 
-    $ heroku apps:create <my_app_name>
-    $ git push heroku
+    $ heroku apps:create <app_name>
+    $ git push heroku master
 
-Thats all. You have deployed your website in Heroku platform but you need to achieve some extra steps.
+You have deployed your website in Heroku platform but you need to achieve some extra steps.
+
+.. note::
+   Check ``ALLOWED_HOSTS`` setting or you will get a 400 (bad request) error when in production
 
 .. _Heroku Toolbelt: https://toolbelt.heroku.com/
 
@@ -45,3 +60,5 @@ Run these commands using Heroku ``run``::
 
 .. note::
    ``django_cms`` package could have a different name according to your initial choose
+
+That's all! Your Django CMS website is deployed on Heroku platform!
