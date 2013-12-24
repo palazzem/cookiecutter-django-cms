@@ -2,7 +2,7 @@
 Overview
 ========
 
-.. note::
+.. warning::
    All these steps follow the `Django CMS documentation`_ (still in beta). However this is **ONLY** a cookiecutter template and there is **NO INTENTION** to replace the official documentation.
 
 .. _Django CMS documentation: http://docs.django-cms.org/en/develop/index.html
