@@ -4,7 +4,7 @@ Django==1.6.1
 https://github.com/divio/django-cms/archive/3.0.0.beta3.zip
 
 # Django CMS dependencies
-djangocms-text-ckeditor==2.0.4
+djangocms-text-ckeditor==2.0.5
 djangocms-admin-style==0.2.0
 django-reversion==1.8.0
 django-classy-tags==0.4
