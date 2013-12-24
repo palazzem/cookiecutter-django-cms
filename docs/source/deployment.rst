@@ -5,7 +5,7 @@ Deployment
 Heroku
 ------
 
-If you choose to enable Heroku deployment during project startup, you already have anything you need.
+If you choose to enable Heroku deployment during project bootstrap, you already have anything you need.
 Simply obtain `Heroku Toolbelt`_ and start creating your first application::
 
     $ heroku apps:create <my_app_name>
@@ -18,7 +18,7 @@ Thats all. You have deployed your website in Heroku platform but you need to ach
 Heroku configuration
 --------------------
 
-You should set some enviroment variables so production configuration work like expected::
+Set these enviroment variables so production configuration will work like expected::
 
     $ heroku config:set DJANGO_SECRET_KEY=<random secret key>
     $ heroku config:set DJANGO_SETTINGS_MODULE=django_cms.settings.production
@@ -26,7 +26,7 @@ You should set some enviroment variables so production configuration work like e
 .. note::
    ``django_cms`` package could have a different name according to your initial choose
 
-Then configure your `AWS bucket`_ and add these environment variables to Heroku::
+Configure your `AWS bucket`_ and add these environment variables to Heroku::
 
     $ heroku config:set AWS_ACCESS_KEY_ID=<random key_id>
     $ heroku config:set AWS_SECRET_ACCESS_KEY=<random access_key>
@@ -37,7 +37,7 @@ Then configure your `AWS bucket`_ and add these environment variables to Heroku:
 Syncdb and collect static
 -------------------------
 
-Run these commands using Heroku shell::
+Run these commands using Heroku ``run``::
 
     $ heroku run python django_cms/manage.py syncdb --all
     $ heroku run python django_cms/manage.py migrate --fake

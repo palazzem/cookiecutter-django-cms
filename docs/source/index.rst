@@ -6,7 +6,7 @@
 Cookiecutter Django CMS: startup with fun!
 ==========================================
 
-This is a `Cookiecutter`_ template to be up and running with Django CMS as fast as possible!
+`Cookiecutter`_ template to be up and running with Django CMS as fast as possible!
 A simple bootstrap template is available and you can use it as a base for your website.
 
 .. _`Cookiecutter`: https://github.com/audreyr/cookiecutter

@@ -31,8 +31,8 @@ You'll be prompted for some project configurations::
 
 Now you are ready to use Django CMS!
 
-Initial configuration
----------------------
+Initial configurations
+----------------------
 
 Like any other Django project you should do these extra steps (if you are a Djangonaut, skip this).
 
@@ -53,11 +53,14 @@ Run all Django CMS check and start django runserver::
 Open http://localhost:8000 and create your first page with Django CMS admin!
 
 .. note::
-   You can avoid to use ``--settings`` parameter if you export ``DJANGO_SETTINGS_MODULE`` in your environment
+   You can avoid to use ``--settings`` parameter if you export ``DJANGO_SETTINGS_MODULE=django_cms.settings.dev`` in your environment
+
+.. note::
+   ``django_cms`` package could have a different name according to your initial choose
 
 More configurations
 -------------------
 
-For more CMS configurations, check official `documentation`_ (still in beta).
+For more Django CMS configurations, check official `documentation`_ (still in beta).
 
 .. _documentation: http://docs.django-cms.org/en/develop/getting_started/configuration.html

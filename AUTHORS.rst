@@ -5,7 +5,7 @@ Authors
 Development Lead
 ----------------
 
-* Emanuele Palazzetti <info@emanuelepalazzetti.eu>
+* Emanuele Palazzetti <hello@palazzetti.me>
 
 Contributors
 ------------
