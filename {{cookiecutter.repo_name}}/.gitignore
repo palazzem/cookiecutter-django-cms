@@ -1,10 +1,35 @@
-# Django
+{{cookiecutter.project_name}}/{{cookiecutter.project_name}}/settings/dev.py
+{{cookiecutter.project_name}}/{{cookiecutter.project_name}}/settings/production.py
+*.py[co]
+*.sw[po]
+*.egg*
+*.rdb
+.idea/
+.coverage
+pip-log.txt
+docs/_gh-pages
+build/
+build.py
+build
+.DS_Store
+.noseids
+tmp/*
+*.swp
+*~
+*.log.*
 *.log
-*.pot
-*.pyc
-
-# Django static files and media
-media/
-
-# Misc
 *.db
+db/
+test_db/
+.vagrant
+*.sublime-project
+*.sublime-workspace
+media/*
+{{cookiecutter.project_name}}/media/*
+.idea/*
+whoosh_index/*
+.templates/
+.templates
+CACHE
+CACHE/*
+togit.sh

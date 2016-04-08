@@ -9,7 +9,7 @@
     :target: https://crate.io/packages/{{ cookiecutter.repo_name }}?version=latest
 
 
-{{ cookiecutter.project_short_description}}
+{{ cookiecutter.description }}
 
 * Free software: BSD license
 
@@ -31,14 +31,14 @@ Enter inside ``{{ cookiecutter.repo_name }}`` folder and install all requirement
 
     pip install -r requirements/development.txt
 
-Enter inside ``{{ cookiecutter.django_cms_app }}`` then prepare your database (sqlite as default) and run the server:
+Enter inside ``{{ cookiecutter.project_name }}`` then prepare your database (sqlite as default) and run the server:
 
 .. code-block:: python
 
-    python manage.py syncdb --all --settings={{ cookiecutter.django_cms_app }}.settings.dev
-    python manage.py migrate --fake --settings={{ cookiecutter.django_cms_app }}.settings.dev
-    python manage.py cms check --settings={{ cookiecutter.django_cms_app }}.settings.dev
-    python manage.py runserver --settings={{ cookiecutter.django_cms_app }}.settings.dev
+    python manage.py syncdb --all --settings={{ cookiecutter.project_name }}.settings.dev
+    python manage.py migrate --fake --settings={{ cookiecutter.project_name }}.settings.dev
+    python manage.py cms check --settings={{ cookiecutter.project_name }}.settings.dev
+    python manage.py runserver --settings={{ cookiecutter.project_name }}.settings.dev
 
 Create your first page with Django CMS admin (``http://localhost:8000/admin``)!
 
