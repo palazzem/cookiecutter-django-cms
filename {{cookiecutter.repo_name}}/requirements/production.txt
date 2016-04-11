@@ -1,7 +1,6 @@
 # Production requirements
 -r base.txt
 
-psycopg2==2.5.1
 {% if cookiecutter.heroku == "y" or cookiecutter.heroku == "Y" %}
 dj-database-url==0.2.2
 gunicorn==18.0

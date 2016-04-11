@@ -61,6 +61,11 @@ Roadmap
 
 * Webfaction deploy (with nginx frontend to serve statics)
 * More bootstrap templates (single page scroller, etc...)
+  
+TO DO 
+-----
+
+* Update docs
 
 Credits
 -------

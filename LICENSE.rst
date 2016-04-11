@@ -1,4 +1,4 @@
-Copyright (c) 2013, Emanuele Palazzetti and contributors
+Copyright (c) 2016, Emanuele Palazzetti and contributors
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without

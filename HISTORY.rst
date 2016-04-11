@@ -2,6 +2,20 @@
 Changelog
 =========
 
+0.3 (2016-04-09)
+------------------
+
+New features:
+
+* django compressor
+* django rq
+  
+Other changes:
+
+* Update Django CMS 3.2.3
+* Update Django 1.9.5
+* removed psycopg from production environment
+
 0.2.3 (2013-12-23)
 ------------------
 

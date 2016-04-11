@@ -1,15 +1,15 @@
 {
-	"full_name": "Michael Scott",
-	"email": "bestboss.scott@example.com",
-	"github_username": "mscott",
-    "year": "2013",
-	"version": "0.1.0",
-	"project_name": "Django CMS",
-	"repo_name": "django-cms-web",
-    "django_cms_app": "django_cms",
-	"project_short_description": "Django CMS boilerplate to start your website in 5 minutes.",
+    "author_name": "Your Name",
+    "email": "Your Email",
+    "year": "2016",
+    "version": "0.1.0",
+    "project_name": "project_name",
+    "repo_name": "{{ cookiecutter.project_name|replace(' ', '_')|replace('-', '_') }}",
+    "description": "{{ cookiecutter.project_name }} website",
     "languages": "en",
-    "site_name": "example.com",
+    "timezone": "UTC",
+    "domain_name": "{{ cookiecutter.project_name }}.com",
+    "extra_plugins": "y",
     "django_filer": "n",
-    "heroku": "y"
+    "heroku": "n"
 }

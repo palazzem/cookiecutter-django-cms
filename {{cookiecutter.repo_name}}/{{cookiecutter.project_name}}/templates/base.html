@@ -1,0 +1,85 @@
+{% raw %}
+{% load i18n staticfiles compress cms_tags sekizai_tags menu_tags %}
+
+<!DOCTYPE html>
+<html lang="{{ request.LANGUAGE_CODE }}">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{% block page_title %} {% if page_title %}{{ page_title }}{% endif %} {% page_attribute "page_title" %} {% endblock %}</title>
+        <meta name="description" content="{% block meta_description %}{% endblock %}">
+        <meta name="author" content="{% block meta_author %}{% endblock %}">
+        <meta name="viewport" content="width=1300" initial-scale="0">
+        <!-- Mobile viewport optimized: h5bp.com/viewport -->
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> -->
+        {% block meta %}{% endblock %}
+        <!-- CSS -->
+        {# use the CDN to get bootstrap css. can not be inside compress css block #}
+        {% block cdn_css %}
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/libs/jquery-2.1.1.min.js"><\/script>')</script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        {% endblock %}
+
+        {% compress css %}
+            {% block css %}
+                <link rel="stylesheet" href="{% static "css/main.css" %}" />
+            {% endblock %}
+        {% endcompress %}
+        {% render_block "css" %}
+        {% compress js %}{% endcompress %}
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
+        <![endif]-->
+    </head>
+    <body class="{% block body_class %}{% endblock %}" {% block body_attributes %}{% endblock %} >
+        {% cms_toolbar %}
+        {% show_menu 0 100 100 100 "menu.html" %}
+        
+          <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+               chromium.org/developers/how-tos/chrome-frame-getting-started -->
+          <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+          <![endif]-->
+          <header>
+            {% block header %}{% endblock %}
+          </header>
+
+          <div role="main">
+            {% block content %}{% endblock %}
+          </div>
+
+          <footer>
+            {% block footer %}
+            <div class="container">
+              <hr>
+              <p>&copy; Company 2016</p>
+            </div>
+            {% endblock footer %}
+          </footer>
+        </div>
+
+        <!-- JavaScript -->
+        <!-- JavaScript at the bottom for fast page loading -->
+        <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+        {% block cdn_js %}
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        {% endblock cdn_js %}
+        <!-- scripts concatenated and minified via django-compressor -->
+        {% compress js %}
+            {% block js %}
+                <script type="text/javascript" src="{% static "js/script.js" %}"></script>
+            {% endblock js %}
+        {% endcompress %}
+        {% render_block "js" %}
+    </body>
+</html>
+{% endraw %}
