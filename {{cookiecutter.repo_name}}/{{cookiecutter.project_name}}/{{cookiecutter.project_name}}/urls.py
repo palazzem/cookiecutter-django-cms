@@ -5,7 +5,6 @@ from django.contrib.sitemaps.views import sitemap
 from django.conf import settings
 from django.views.generic.base import TemplateView
 
-
 from cms.sitemaps import CMSSitemap
 
 

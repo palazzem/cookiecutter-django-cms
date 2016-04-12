@@ -13,6 +13,7 @@ Features
 --------
 
 * Simple Bootstrap 3 templates ready to use
+* django compressor included
 * Heroku deployment (with Amazon S3 for statics)
 
 Installation and usage
@@ -27,7 +28,7 @@ First, get cookiecutter::
 
 Now run it against this repo::
 
-    $ cookiecutter https://github.com/palazzem/cookiecutter-django-cms.git --checkout 0.2.3
+    $ cookiecutter https://github.com/palazzem/cookiecutter-django-cms
 
 You'll be prompted for some questions (included Heroku deployment settings).
 After project generation, you'll find a README.rst in which you'll find all information to sync your database with fake migrations. Before your first commit remember to change (if required) the ``LICENSE`` file.
