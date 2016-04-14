@@ -47,7 +47,7 @@ More configurations
 
 Check official `documentation`_.
 
-.. _documentation: http://docs.django-cms.org/en/develop/getting_started/configuration.html
+.. _documentation: http://django-cms.readthedocs.org/en/develop/reference/configuration.html
 
 Other Django CMS bootstrap tools
 --------------------------------
