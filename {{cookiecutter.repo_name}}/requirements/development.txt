@@ -2,4 +2,4 @@
 
 -r base.txt
 
-django-debug-toolbar==1.4
+django-debug-toolbar==1.5

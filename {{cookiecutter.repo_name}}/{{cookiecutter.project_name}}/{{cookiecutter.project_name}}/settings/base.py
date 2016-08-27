@@ -387,11 +387,11 @@ THUMBNAIL_PROCESSORS = (
 )
 
 MIGRATION_MODULES = {
-    'cmsplugin_filer_image': 'cmsplugin_filer_image.migrations_django',
-    'cmsplugin_filer_file': 'cmsplugin_filer_file.migrations_django',
-    'cmsplugin_filer_folder': 'cmsplugin_filer_folder.migrations_django',
-    'cmsplugin_filer_video': 'cmsplugin_filer_video.migrations_django',
-    'cmsplugin_filer_teaser': 'cmsplugin_filer_teaser.migrations_django'
+    'cmsplugin_filer_image': 'cmsplugin_filer_image.migrations',
+    'cmsplugin_filer_file': 'cmsplugin_filer_file.migrations',
+    'cmsplugin_filer_folder': 'cmsplugin_filer_folder.migrations',
+    'cmsplugin_filer_video': 'cmsplugin_filer_video.migrations',
+    'cmsplugin_filer_teaser': 'cmsplugin_filer_teaser.migrations'
 }
 {% endif %}
 
@@ -437,4 +437,3 @@ RQ_QUEUES = {
 
 RQ_SHOW_ADMIN_LINK = True
 ########## END REDIS QUEUE CONFIGURATION
-
