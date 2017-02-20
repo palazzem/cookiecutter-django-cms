@@ -125,9 +125,6 @@ STATICFILES_FINDERS = (
 
 )
 
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = environ.get('DJANGO_SECRET_KEY')
-
 # List of callables that know how to import templates from various sources.
 TEMPLATES = [
     {
@@ -138,14 +135,14 @@ TEMPLATES = [
             'context_processors': [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.core.context_processors.i18n',
-                'django.core.context_processors.debug',
-                'django.core.context_processors.request',
-                'django.core.context_processors.media',
-                'django.core.context_processors.csrf',
-                'django.core.context_processors.tz',
+                'django.template.context_processors.i18n',
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.template.context_processors.media',
+                'django.template.context_processors.csrf',
+                'django.template.context_processors.tz',
                 'sekizai.context_processors.sekizai',
-                'django.core.context_processors.static',
+                'django.template.context_processors.static',
                 'cms.context_processors.cms_settings'
             ]
         },
@@ -207,8 +204,6 @@ INSTALLED_APPS = (
     {% if cookiecutter.extra_plugins == "y" or cookiecutter.extra_plugins == "Y" %}
     'django_select2',
     'djangocms_style',
-    'djangocms_column',
-    'djangocms_link',
     'djangocms_inherit',
     'djangocms_text_ckeditor',
     {% endif %}

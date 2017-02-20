@@ -2,6 +2,17 @@
 Changelog
 =========
 
+0.3.2 (2017-02-20)
+------------------
+
+* Update Django CMS 3.4.2
+* Update Django 1.10.5
+
+Other changes:
+
+* removed djangcms-link from base.txt 
+* removed djangocms-column from base.txt
+
 0.3.1 (2016-08-27)
 ------------------
 
