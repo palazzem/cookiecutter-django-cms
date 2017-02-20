@@ -16,6 +16,8 @@ DATABASES = {
     }
 }
 
+MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
+
 SECRET_KEY = 'devel'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
