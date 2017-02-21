@@ -16,7 +16,7 @@ DATABASES = {
     }
 }
 
-MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
+MIDDLEWARE += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
 
 SECRET_KEY = 'devel'
 
