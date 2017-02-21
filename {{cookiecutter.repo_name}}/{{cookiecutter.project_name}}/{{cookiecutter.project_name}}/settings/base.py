@@ -138,21 +138,21 @@ TEMPLATES = [
             'context_processors': [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.core.context_processors.i18n',
-                'django.core.context_processors.debug',
-                'django.core.context_processors.request',
-                'django.core.context_processors.media',
-                'django.core.context_processors.csrf',
-                'django.core.context_processors.tz',
+                'django.template.context_processors.i18n',
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.template.context_processors.media',
+                'django.template.context_processors.csrf',
+                'django.template.context_processors.tz',
                 'sekizai.context_processors.sekizai',
-                'django.core.context_processors.static',
+                'django.template.context_processors.static',
                 'cms.context_processors.cms_settings'
             ]
         },
     },
 ]
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = (
     'cms.middleware.utils.ApphookReloadMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -207,8 +207,6 @@ INSTALLED_APPS = (
     {% if cookiecutter.extra_plugins == "y" or cookiecutter.extra_plugins == "Y" %}
     'django_select2',
     'djangocms_style',
-    'djangocms_column',
-    'djangocms_link',
     'djangocms_inherit',
     'djangocms_text_ckeditor',
     {% endif %}
