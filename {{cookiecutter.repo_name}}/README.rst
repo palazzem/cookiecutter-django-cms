@@ -16,9 +16,9 @@
 Requirements
 ------------
 
-* Django 1.8+
+* Django 1.10+
 * Python 2.7
-* Django CMS 3.2+
+* Django CMS 3.4+
 
 .. _django-cms: https://github.com/divio/django-cms
 
